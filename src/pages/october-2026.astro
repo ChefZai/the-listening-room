@@ -63,32 +63,55 @@ import '../styles/global.css';
         margin-bottom: 0;
       }
 
-
-      /* Compact the featured story so its text and listening links fit the page. */
-      .playlist-story-page .playlist-artwork-placeholder {
-        box-sizing: border-box;
-        height: 142px;
-        min-height: 142px;
-        padding: 16px 20px;
-        margin-bottom: 12px;
+      /* Mobile: let longer magazine pages scroll instead of clipping their content. */
+      @media (max-width: 640px) {
+        .magazine-viewer {
+          width: 100%;
+          max-width: 100%;
+          padding-left: 10px;
+          padding-right: 10px;
+          box-sizing: border-box;
+        }
+        .flipbook-shell {
+          width: 100%;
+          max-width: 100%;
+          overflow: visible;
+        }
+        #flipbook {
+          max-width: 100%;
+          margin: 0 auto;
+        }
+        .flip-page {
+          box-sizing: border-box;
+          overflow-y: auto !important;
+          overflow-x: hidden !important;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: thin;
+        }
+        .flip-page .page-copy,
+        .flip-page .playlist-story-copy,
+        .flip-page .hidden-gem-copy,
+        .flip-page .marrow-review-intro {
+          min-height: 0;
+          height: auto;
+        }
+        .flip-page h2 {
+          overflow-wrap: anywhere;
+        }
+        .flip-page p {
+          overflow-wrap: break-word;
+        }
+        .spotify-embed {
+          max-width: 100%;
+        }
+        .spotify-embed iframe {
+          max-width: 100%;
+        }
+        .magazine-controls button {
+          min-height: 42px;
+          padding: 10px 12px;
+        }
       }
-      .playlist-story-page .playlist-artwork-placeholder strong {
-        font-size: clamp(25px, 3vw, 38px);
-        line-height: .95;
-      }
-      .playlist-story-page .playlist-story-copy h2 {
-        font-size: clamp(27px, 3vw, 36px);
-        line-height: .98;
-        margin: 4px 0 8px;
-      }
-      .playlist-story-page .playlist-story-copy p:not(.eyebrow) {
-        font-size: 12px;
-        line-height: 1.45;
-        margin: 7px 0;
-      }
-      .playlist-story-page .playlist-story-copy .eyebrow { margin: 0 0 5px; }
-      .playlist-story-page .spotify-embed { margin: 8px 0; }
-      .playlist-story-page .playlist-platform-links { margin-top: 6px; }
 
       @media (max-height: 700px) {
         .playlist-story-page .spotify-embed { display: none; }
@@ -180,9 +203,11 @@ import '../styles/global.css';
   <div class="playlist-story-copy">
     <p class="eyebrow">8 SONGS · 30 MINUTES, 58 SECONDS</p>
     <h2>A question<br /><em>of taste.</em></h2>
-    <p>Sometimes two songs make sense together only when you stop hearing them as separate pieces of music.</p>
-    <p>“Do Your Ears Work?” follows the threads hiding in production, melodies, and sounds — the details that connect songs that don't seem like natural companions.</p>
-    <p>“I Can't Keep Running” by Chromatics leads me toward “Man of the Year” by ScHoolboy Q. I hear a similar ambition expressed in completely different ways. I don't need every song to match; I want you to listen closely enough to discover your own connections. You might hear what I hear — or find something I missed. Either way, press play.</p>
+    <p>Sometimes a connection between two songs isn't obvious until you stop hearing them as separate pieces of music.</p>
+    <p>“Do Your Ears Work?” follows the threads hiding in production, melodies, and sounds — the things that make songs seem connected even when they don't look like natural companions.</p>
+    <p>“I Can't Keep Running” by Chromatics opens the door, leading toward “Man of the Year” by ScHoolboy Q. What interests me isn't just the musical relationship, but how two songs can reach toward a similar ambition and arrive somewhere completely different.</p>
+    <p>I don't need every song on a playlist to match. Sometimes the best transition is the one that makes you question why these songs belong together — until you listen a little closer.</p>
+    <p>This isn't an invitation to agree with every connection I make. It's an invitation to listen with curiosity. You might hear it immediately. You might not hear it at all. Either way, press play.</p>
   </div>
 
   <div class="spotify-embed">
