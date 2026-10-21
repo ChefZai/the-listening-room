@@ -63,6 +63,55 @@ import '../styles/global.css';
         margin-bottom: 0;
       }
 
+
+      /* Keep the featured playlist story, player, and listening links on page 3. */
+      .playlist-story-page {
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .playlist-story-page .playlist-artwork-placeholder {
+        height: 132px !important;
+        min-height: 132px !important;
+        margin: 10px 0 12px !important;
+        padding: 14px 18px !important;
+        box-sizing: border-box;
+      }
+      .playlist-story-page .playlist-artwork-placeholder strong {
+        font-size: clamp(24px, 3vw, 34px) !important;
+        line-height: .92 !important;
+      }
+      .playlist-story-page .playlist-story-copy {
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+      }
+      .playlist-story-page .playlist-story-copy .eyebrow {
+        font-size: 8px !important;
+        margin: 0 0 5px !important;
+      }
+      .playlist-story-page .playlist-story-copy h2 {
+        font-size: clamp(23px, 2.7vw, 31px) !important;
+        line-height: .98 !important;
+        margin: 0 0 7px !important;
+      }
+      .playlist-story-page .playlist-story-copy p:not(.eyebrow) {
+        font-size: 10px !important;
+        line-height: 1.32 !important;
+        margin: 0 0 5px !important;
+      }
+      .playlist-story-page .spotify-embed {
+        margin: 8px 0 5px !important;
+      }
+      .playlist-story-page .playlist-platform-links {
+        display: flex;
+        gap: 8px;
+        margin-top: 4px !important;
+      }
+      .playlist-story-page .playlist-listen-link {
+        font-size: 8px !important;
+        padding: 5px 0 !important;
+      }
+
       /* Mobile: let longer magazine pages scroll instead of clipping their content. */
       @media (max-width: 640px) {
         .magazine-viewer {
@@ -95,6 +144,16 @@ import '../styles/global.css';
           min-height: 0;
           height: auto;
         }
+        .playlist-story-page {
+          overflow-y: auto !important;
+        }
+        .playlist-story-page .playlist-artwork-placeholder {
+          height: 112px !important;
+          min-height: 112px !important;
+        }
+        .playlist-story-page .playlist-story-copy p:not(.eyebrow) {
+          font-size: 11px !important;
+        }
         .flip-page h2 {
           overflow-wrap: anywhere;
         }
@@ -113,9 +172,6 @@ import '../styles/global.css';
         }
       }
 
-      @media (max-height: 700px) {
-        .playlist-story-page .spotify-embed { display: none; }
-      }
     </style>
   </head>
 
