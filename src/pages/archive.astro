@@ -1,0 +1,80 @@
+
+---
+import '../styles/global.css';
+
+const issues = [
+  {
+    month: 'OCTOBER 2026',
+    number: '01',
+    title: 'Do Your Ears Work?',
+    description:
+      'A month of listening, personal discoveries, and music that makes sense in its own way.',
+    status: 'CURRENT ISSUE',
+    href: '/',
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4efe6" />
+    <title>Issue Archive — The Listening Room</title>
+    <meta
+      name="description"
+      content="Explore the monthly issues of The Listening Room, preserved as listening time capsules."
+    />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="wordmark" href="/" aria-label="The Listening Room home">
+        The Listening Room<span class="period">.</span>
+      </a>
+      <p class="masthead-note">AN INDEPENDENT MUSIC JOURNAL</p>
+    </header>
+
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="/">LATEST ISSUE</a>
+      <a href="/archive/" aria-current="page">THE ARCHIVE</a>
+      <a href="/playlists/">PLAYLISTS</a>
+      <a href="/album-reviews/">ALBUM REVIEWS</a>
+      <a href="/listener-requests/">LISTENER REQUESTS</a>
+      <a href="/about/">ABOUT</a>
+    </nav>
+
+    <main class="category-page">
+      <header class="category-heading">
+        <p class="eyebrow">THE LISTENING ROOM · PAST EDITIONS</p>
+        <h1>The Archive<span class="period">.</span></h1>
+        <p>
+          Every issue is a record of a particular moment in listening.
+          Explore past editions as they were published, with their original
+          stories, playlists, and visual identities intact.
+        </p>
+      </header>
+
+      <section class="playlist-list" aria-label="Monthly issues">
+        {issues.map((issue) => (
+          <article class="playlist-entry">
+            <p class="playlist-number">{issue.number}</p>
+            <div>
+              <p class="eyebrow">{issue.month} · {issue.status}</p>
+              <h2>{issue.title}</h2>
+              <p>{issue.description}</p>
+              <a class="text-link" href={issue.href}>
+                OPEN ISSUE <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="/">The Listening Room<span class="period">.</span></a>
+      <p>MADE TO BE LISTENED TO.</p>
+      <p>© 2026 THE LISTENING ROOM</p>
+    </footer>
+  </body>
+</html>

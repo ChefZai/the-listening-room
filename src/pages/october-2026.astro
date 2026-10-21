@@ -1,0 +1,528 @@
+
+---
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The October 2026 issue of The Listening Room." />
+    <title>October 2026 — The Listening Room</title>
+
+    <style>
+      .spotify-embed {
+        width: 100%;
+        margin: 16px 0;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+      .spotify-embed iframe {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        border: 0;
+        border-radius: 12px;
+      }
+      .spotify-embed-placeholder {
+        box-sizing: border-box;
+        padding: 14px 16px;
+        border: 1px dashed var(--line);
+        background: var(--paper);
+        color: var(--muted);
+        font-family: var(--sans);
+        font-size: 11px;
+        line-height: 1.5;
+      }
+      .spotify-embed-placeholder p { margin: 4px 0; }
+      .spotify-embed-placeholder strong {
+        color: var(--burgundy);
+        font-size: 9px;
+        letter-spacing: .12em;
+      }
+      .october-favorites-page .spotify-embed { margin-top: auto; }
+      .marrow-review-notes .spotify-embed { margin-top: 22px; }
+      .hidden-gem-spotify { margin: 12px 0; }
+
+      /* Keep the longer editorial prologue comfortably inside its page. */
+      .prologue-page .page-copy {
+        box-sizing: border-box;
+        padding-bottom: 8px;
+      }
+      .prologue-page .page-copy h2 {
+        font-size: clamp(28px, 3.1vw, 40px);
+        line-height: 1.02;
+        margin: 0 0 14px;
+      }
+      .prologue-page .page-copy > p:not(.drop-cap) {
+        font-size: 13px;
+        line-height: 1.48;
+        margin: 0 0 9px;
+      }
+      .prologue-page .page-copy .drop-cap {
+        margin-bottom: 0;
+      }
+
+
+      /* Compact the featured story so its text and listening links fit the page. */
+      .playlist-story-page .playlist-artwork-placeholder {
+        box-sizing: border-box;
+        height: 142px;
+        min-height: 142px;
+        padding: 16px 20px;
+        margin-bottom: 12px;
+      }
+      .playlist-story-page .playlist-artwork-placeholder strong {
+        font-size: clamp(25px, 3vw, 38px);
+        line-height: .95;
+      }
+      .playlist-story-page .playlist-story-copy h2 {
+        font-size: clamp(27px, 3vw, 36px);
+        line-height: .98;
+        margin: 4px 0 8px;
+      }
+      .playlist-story-page .playlist-story-copy p:not(.eyebrow) {
+        font-size: 12px;
+        line-height: 1.45;
+        margin: 7px 0;
+      }
+      .playlist-story-page .playlist-story-copy .eyebrow { margin: 0 0 5px; }
+      .playlist-story-page .spotify-embed { margin: 8px 0; }
+      .playlist-story-page .playlist-platform-links { margin-top: 6px; }
+
+      @media (max-height: 700px) {
+        .playlist-story-page .spotify-embed { display: none; }
+      }
+    </style>
+  </head>
+
+  <body class="magazine-body">
+    <header class="masthead">
+      <a class="wordmark" href="/">The Listening Room<span class="period">.</span></a>
+      <p class="masthead-note">AN INDEPENDENT MUSIC JOURNAL</p>
+    </header>
+
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="/">HOME</a>
+      <a href="/archive/">THE ARCHIVE</a>
+      <a href="/playlists/">PLAYLISTS</a>
+      <a href="/album-reviews/">ALBUM REVIEWS</a>
+      <a href="/listener-requests/">LISTENER REQUESTS</a>
+      <a href="/about/">ABOUT</a>
+    </nav>
+
+    <main class="magazine-viewer">
+      <div class="magazine-topline">
+        <span>THE LISTENING ROOM</span>
+        <span>ISSUE NO. 01 · OCTOBER 2026</span>
+      </div>
+
+      <div class="flipbook-shell">
+        <div id="flipbook">
+
+          <!-- COVER -->
+          <article class="flip-page flip-cover">
+            <div class="cover-meta">
+              <span>ISSUE NO. 01</span>
+              <span>OCTOBER 2026</span>
+            </div>
+            <div class="cover-main">
+              <p class="cover-kicker">A QUESTION OF TASTE</p>
+              <h1>DO YOUR<br />EARS WORK<span>?</span></h1>
+              <p class="cover-author">A PLAYLIST BY ISAIAH WILKINS</p>
+            </div>
+            <div class="cover-foot">
+              <span>THE LISTENING ROOM</span>
+              <span>VOL. 01</span>
+            </div>
+          </article>
+
+          <!-- PAGE 1: PROLOGUE -->
+          <article class="flip-page prologue-page">
+            <p class="page-label">01 — PROLOGUE</p>
+            <div class="page-copy">
+              <p class="drop-cap">I</p>
+              <h2>A note before<br /><em>you listen.</em></h2>
+              <p>I have a habit of hearing things in music that I can't always explain right away. A sound catches my attention. A melody reminds me of something I can't quite place. Two songs that have no obvious reason to sit beside each other suddenly make sense together.</p>
+              <p>I've learned not to dismiss those connections just because they're difficult to explain.</p>
+              <p>The Listening Room is a place for following them. For sitting with an album a little longer, revisiting a song after the first impression has faded, and paying attention to the details that make music personal. Not every interpretation needs to be universal. Not every favorite needs to be understood by everyone.</p>
+              <p>This is the October issue. Inside, you'll find the sounds I've been carrying with me, the records I'm spending time with, and a few things I think deserve a closer listen.</p>
+              <p>You don't have to agree with me. In fact, I'd rather you bring your own ears. Just give the music a chance to tell you something you weren't expecting.</p>
+              <p>Welcome to The Listening Room.</p>
+              <p><em>Isaiah Wilkins · October 2026</em></p>
+            </div>
+          </article>
+
+          <!-- PAGE 2: CONTENTS -->
+          <article class="flip-page">
+            <p class="page-label">02 — INSIDE THIS ISSUE</p>
+            <h2>In this<br /><em>issue.</em></h2>
+            <ol class="contents-list">
+              <li><a href="#" data-page="1"><span>Prologue</span><span>01</span></a></li>
+              <li><a href="#" data-page="3"><span>Do Your Ears Work?</span><span>03</span></a></li>
+              <li><a href="#" data-page="4"><span>Listening Notes</span><span>04</span></a></li>
+              <li><a href="#" data-page="5"><span>Album Review</span><span>05</span></a></li>
+              <li><a href="#" data-page="7"><span>The Hidden Gem</span><span>07</span></a></li>
+              <li><a href="#" data-page="8"><span>Honorable Mentions</span><span>08</span></a></li>
+            </ol>
+          </article>
+
+          <!-- PAGE 3: FEATURED PLAYLIST -->
+          <article class="flip-page playlist-story-page">
+  <p class="page-label">03 — THE FEATURED PLAYLIST</p>
+
+  <div class="playlist-artwork-placeholder">
+    <span>THE LISTENING ROOM</span>
+    <strong>DO YOUR<br />EARS WORK?</strong>
+    <small>OCTOBER 2026 · VOL. 01</small>
+  </div>
+
+  <div class="playlist-story-copy">
+    <p class="eyebrow">8 SONGS · 30 MINUTES, 58 SECONDS</p>
+    <h2>A question<br /><em>of taste.</em></h2>
+    <p>Sometimes two songs make sense together only when you stop hearing them as separate pieces of music.</p>
+    <p>“Do Your Ears Work?” follows the threads hiding in production, melodies, and sounds — the details that connect songs that don't seem like natural companions.</p>
+    <p>“I Can't Keep Running” by Chromatics leads me toward “Man of the Year” by ScHoolboy Q. I hear a similar ambition expressed in completely different ways. I don't need every song to match; I want you to listen closely enough to discover your own connections. You might hear what I hear — or find something I missed. Either way, press play.</p>
+  </div>
+
+  <div class="spotify-embed">
+    <iframe
+      src="https://open.spotify.com/embed/playlist/09L0yt97xcYd3RpJIYA5Ja?utm_source=generator"
+      title="Do Your Ears Work? — Spotify playlist"
+      width="100%"
+      height="152"
+      loading="lazy"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="playlist-platform-links">
+    <a
+      class="playlist-listen-link"
+      href="https://open.spotify.com/playlist/09L0yt97xcYd3RpJIYA5Ja?si=Hg87OQCaSkiCxYBsVkFV0w"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <span>LISTEN ON SPOTIFY</span>
+      <span aria-hidden="true">↗</span>
+    </a>
+
+    <a
+      class="playlist-listen-link"
+      href="https://music.apple.com/us/playlist/do-your-ears-work/pl.u-vxy6X1BTz3ZJelW"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <span>LISTEN ON APPLE MUSIC</span>
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</article>
+
+          <!-- PAGE 4: TRACKLIST -->
+          <article class="flip-page playlist-track-page">
+            <p class="page-label">04 — THE TRACKLIST</p>
+            <h2>Listen<br /><em>closely.</em></h2>
+
+            <ol class="track-list">
+              <li>
+                <span class="track-number">01</span>
+                <span class="track-info">
+                  <a href="https://open.spotify.com/search/Chromatics%20I%20Can%27t%20Keep%20Running" target="_blank" rel="noreferrer">I Can't Keep Running</a>
+                  <small>Chromatics</small>
+                </span>
+                <time>4:34</time>
+              </li>
+              <li>
+                <span class="track-number">02</span>
+                <span class="track-info">
+                  <a href="https://open.spotify.com/search/ScHoolboy%20Q%20Man%20of%20the%20Year" target="_blank" rel="noreferrer">Man of the Year</a>
+                  <small>ScHoolboy Q</small>
+                </span>
+                <time>3:36</time>
+              </li>
+              <li>
+                <span class="track-number">03</span>
+                <span class="track-info">
+                  <a href="https://open.spotify.com/search/Kendrick%20Lamar%20The%20Recipe%20Dr%20Dre" target="_blank" rel="noreferrer">The Recipe (feat. Dr. Dre)</a>
+                  <small>Kendrick Lamar</small>
+                </span>
+                <time>5:53</time>
+              </li>
+              <li>
+                <span class="track-number">04</span>
+                <span class="track-info">
+                  <a href="https://open.spotify.com/search/Paul%20Spring%20Gravitron" target="_blank" rel="noreferrer">Gravitron</a>
+                  <small>Paul Spring</small>
+                </span>
+                <time>3:52</time>
+              </li>
+              <li>
+                <span class="track-number">05</span>
+                <span class="track-info">
+                  <a href="https://open.spotify.com/search/LUCY%20Cooper%20B%20Handy%20FANCY%20CHANDELIER" target="_blank" rel="noreferrer">FANCY CHANDELIER</a>
+                  <small>LUCY (Cooper B. Handy)</small>
+                </span>
+                <time>1:47</time>
+              </li>
+              <li>
+                <span class="track-number">06</span>
+                <span class="track-info">
+                  <a href="https://open.spotify.com/search/Horse%20Vision%20You%20Could%20Have%20It" target="_blank" rel="noreferrer">You Could Have It</a>
+                  <small>Horse Vision</small>
+                </span>
+                <time>2:47</time>
+              </li>
+              <li>
+                <span class="track-number">07</span>
+                <span class="track-info">
+                  <a href="https://open.spotify.com/search/Sletta%20Take%20Your%20Time" target="_blank" rel="noreferrer">Take Your Time</a>
+                  <small>Sletta</small>
+                </span>
+                <time>4:04</time>
+              </li>
+              <li>
+                <span class="track-number">08</span>
+                <span class="track-info">
+                  <a href="https://open.spotify.com/search/Luke%20Temple%20Florida" target="_blank" rel="noreferrer">Florida</a>
+                  <small>Luke Temple</small>
+                </span>
+                <time>4:25</time>
+              </li>
+            </ol>
+
+            <p class="playlist-note">8 TRACKS · 30 MINUTES, 58 SECONDS</p>
+          </article>
+
+          
+<!-- PAGE 5: MARROW ALBUM REVIEW PLACEHOLDER -->
+<article class="flip-page marrow-review-page">
+  <p class="page-label">05 — ALBUM REVIEW</p>
+
+  <div class="marrow-review-art">
+    <p class="eyebrow">THE LISTENING ROOM · OCTOBER 2026</p>
+    <h2>marroW</h2>
+    <p class="marrow-artist">BRAKENCE</p>
+    <span class="marrow-rule"></span>
+    <p class="marrow-status">REVIEW IN PROGRESS</p>
+  </div>
+
+  <div class="marrow-review-intro">
+    <p class="eyebrow">A RECORD STILL UNFOLDING</p>
+    <p>
+      Some albums deserve more than a first impression.
+      This space is being saved for a full listen to
+      brakence's <em>marroW</em>.
+    </p>
+  </div>
+</article>
+
+<!-- PAGE 6: REVIEW NOTES -->
+<article class="flip-page marrow-review-notes">
+  <p class="page-label">06 — LISTENING NOTES</p>
+
+  <div class="page-copy">
+    <p class="eyebrow">BRAKENCE · marroW</p>
+    <h2>To be<br /><em>continued.</em></h2>
+    <p>
+      The full review will take shape after spending time
+      with the complete album.
+    </p>
+    <p>
+      When we return to this page, we'll explore the moments
+      that stand out, the production choices, the emotional
+      impact, and what remains after the music ends.
+    </p>
+    <div class="spotify-embed">
+      <iframe
+        data-testid="embed-iframe"
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/album/1XJET4J6WgkMkalolZojgR?utm_source=generator"
+        title="brakence — marroW on Spotify"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="marrow-notes-footer">
+    <span>ALBUM REVIEW</span>
+    <span>COMING SOON</span>
+  </div>
+</article>
+
+
+          
+<!-- PAGE 7: HIDDEN GEM -->
+<article class="flip-page hidden-gem-page">
+  <p class="page-label">07 — THE HIDDEN GEM</p>
+
+  <div class="hidden-gem-heading">
+    <p class="eyebrow">A DISCOVERY FOR AFTER DARK</p>
+    <h2>Vivre pour<br /><em>vivre.</em></h2>
+    <p class="hidden-gem-artist">VCENTE</p>
+  </div>
+
+  <div class="hidden-gem-rule"></div>
+
+  <div class="hidden-gem-copy">
+    <p class="hidden-gem-mood">LATE NIGHT · SENSUAL · INTIMATE</p>
+    <p>
+      Some songs are made for a different kind of hour.
+      <em>Vivre pour vivre</em> by Vcente is one I enjoy
+      for its late-night, sexy vibes.
+    </p>
+    <p>
+      It's the kind of discovery I'd save for when the
+      lights are low and the night has slowed down.
+      No overthinking required — just let the mood take over.
+    </p>
+  </div>
+
+  <div class="spotify-embed hidden-gem-spotify">
+    <iframe
+      data-testid="embed-iframe"
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/2x4tAIDXryTpVHutI73Btz?utm_source=generator"
+      title="The Hidden Gem — Spotify track"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="hidden-gem-links">
+    <a
+      href="https://open.spotify.com/track/2x4tAIDXryTpVHutI73Btz?si=afb23a5d0a6b42c1"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <span>OPEN IN SPOTIFY</span>
+      <span aria-hidden="true">↗</span>
+    </a>
+    <a
+      href="https://music.apple.com/us/search?term=Vcente%20Vivre%20pour%20vivre"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <span>FIND ON APPLE MUSIC</span>
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</article>
+
+          <!-- PAGE 8: HONORABLE MENTIONS -->
+          <article class="flip-page october-favorites-page honorable-mentions-page">
+            <p class="page-label">08 — HONORABLE MENTIONS</p>
+            <div class="page-copy">
+              <p class="eyebrow">OCTOBER 2026 · MORE TO THE ROTATION</p>
+              <h2>Still worth<br /><em>a listen.</em></h2>
+              <p>A place for the songs that almost made the issue — and the ones worth adding to your queue next.</p>
+            </div>
+            <div class="spotify-embed spotify-embed-placeholder">
+              <p><strong>SONGS TO ADD</strong></p>
+              <p>This space is reserved for honorable mentions. Add the tracks you want readers to discover next.</p>
+            </div>
+          </article>
+
+          <!-- BACK COVER -->
+          <article class="flip-page flip-back-cover">
+            <p class="back-cover-name">The Listening Room<span>.</span></p>
+            <p class="back-cover-note">A PERSONAL MUSIC JOURNAL</p>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="magazine-controls">
+        <button id="previous-page" type="button" disabled>← PREVIOUS</button>
+        <span id="page-status" aria-live="polite">COVER</span>
+        <button id="next-page" type="button">TURN PAGE →</button>
+      </div>
+      <p class="magazine-hint">TURN THE PAGE. LISTEN CLOSELY.</p>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="/">The Listening Room<span class="period">.</span></a>
+      <p>MADE TO BE LISTENED TO.</p>
+      <p>© 2026 THE LISTENING ROOM</p>
+    </footer>
+
+    <script>
+      import { PageFlip } from 'page-flip';
+
+      const bookElement = document.getElementById('flipbook');
+      const previousButton = document.getElementById('previous-page');
+      const nextButton = document.getElementById('next-page');
+      const pageStatus = document.getElementById('page-status');
+
+      if (bookElement && previousButton && nextButton && pageStatus) {
+        const pageFlip = new PageFlip(bookElement, {
+          width: 600,
+          height: 760,
+          size: 'stretch',
+          minWidth: 280,
+          maxWidth: 1200,
+          minHeight: 360,
+          maxHeight: 900,
+          showCover: true,
+          usePortrait: true,
+          startPage: 0,
+          drawShadow: true,
+          flippingTime: 1100,
+          maxShadowOpacity: 0.12,
+          mobileScrollSupport: true,
+          autoSize: true
+        });
+
+        pageFlip.loadFromHTML(bookElement.querySelectorAll('.flip-page'));
+
+        function updateControls() {
+          const current = pageFlip.getCurrentPageIndex();
+          const total = pageFlip.getPageCount();
+
+          previousButton.disabled = current <= 0;
+          nextButton.disabled = current >= total - 1;
+
+          pageStatus.textContent = current === 0
+            ? 'COVER'
+            : `PAGE ${current} OF ${total - 1}`;
+
+          nextButton.textContent = current >= total - 1
+            ? 'END OF ISSUE'
+            : 'TURN PAGE →';
+        }
+
+        pageFlip.on('flip', updateControls);
+
+        document.querySelectorAll('.contents-list a[data-page]').forEach((link) => {
+          link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetPage = Number(link.dataset.page);
+
+            if (
+              Number.isInteger(targetPage) &&
+              targetPage >= 0 &&
+              targetPage < pageFlip.getPageCount()
+            ) {
+              pageFlip.turnToPage(targetPage);
+            }
+          });
+        });
+
+        previousButton.addEventListener('click', () => pageFlip.flipPrev());
+        nextButton.addEventListener('click', () => pageFlip.flipNext());
+
+        updateControls();
+      }
+    </script>
+  </body>
+</html>
